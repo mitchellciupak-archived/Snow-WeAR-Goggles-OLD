@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="554e3431-689b-4dd1-9eba-8375684fdd89" name="477grp6" url="http://ecegrid.ecn.purdue.edu">
+        <fileTransfer host="ecegrid.ecn.purdue.edu" port="22" rootFolder="/home/shay/a/477grp6/web" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -8,50 +8,50 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 @-ms-viewport {
-    width: device-width;
+  width: device-width;
 }
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 .clearfix:before,
 .clearfix:after {
-    display: table;
-    content: "";
-    line-height: 0;
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 .hide-text {
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 .input-block-level {
-    display: block;
-    width: 100%;
-    min-height: 31px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 31px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .hidden {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 .visible-phone {
-    display: none !important;
+  display: none !important;
 }
 .visible-tablet {
-    display: none !important;
+  display: none !important;
 }
 .hidden-desktop {
-    display: none !important;
+  display: none !important;
 }
 .visible-desktop {
-    display: inherit !important;
+  display: inherit !important;
 }
 /*@media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
@@ -1019,8 +1019,8 @@
 }
 */
 @media (min-width: 980px) {
-    .nav-collapse.collapse {
-        height: auto !important;
-        overflow: visible !important;
-    }
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
 }
