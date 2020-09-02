@@ -19,10 +19,10 @@ This website was based upon a number of source materials, which are elaborated u
 <!-- ECE477 preview URL -->
 <!--<base href="https://engineering.purdue.edu/ece477/preview/" />-->
 <!-- ECE477 final URL -->
-<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />
+<!-- <base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" /> -->
 
 <!--Content-->
-<title>ECE477 Course Documents</title>
+<title>ECE477 Team 6 References</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="George Hadley">
@@ -30,10 +30,10 @@ This website was based upon a number of source materials, which are elaborated u
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!--CSS-->
-<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/content.css">
+<link rel="stylesheet" href="../css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/content.css">
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -42,46 +42,43 @@ This website was based upon a number of source materials, which are elaborated u
 <body>
 <div id="wrapper_site">
     <div id="wrapper_page">
-	<!-- Instantiate global site header.-->
-	<div id="header"></div>
+		<!-- Instantiate global site header.-->
+		<div id="header"></div>
 		<!-- Instantiate site global navigation bar.-->
 		<div id="menu"></div>
-	
-		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
-			img folder located at this directory level. -->
+
 		<div id="banner">
-			<img src="Files/img/BannerImgExample.jpg"></img>
+			<img src="img/BannerImgExample.jpg">
 		</div>
-	
-		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
-			and include things such as a file lister (for listing out homework assignments or tutorials)
-		-->
+
 		<div id="content">
 			<!-- Homework assignments are listed out here -->
-			<h2>Project Documents:</h2>
+			<h2>Project References:</h2>
 			<div id="document">
-			<h2><a href="Files/refs/uc_datasheet.pdf">Your Microcontroller Datasheet</a></h2>
-			<h2><a href="Files/refs/whitepaper.pdf">A Research Whitepaper</a></h2>
-			<h2><a href="Files/refs/sensor_datasheet.pdf">Datasheet for a sensor</a></h2>
-			<h2><a href="Files/refs/appnote.pdf">An Application Note</a></h2>
-            <h2><a href="Files/refs/update_your_website.or_else">And so on...</a></h2>
+				<!--
+				<h2><a href="refs/uc_datasheet.pdf">Your Microcontroller Datasheet</a></h2>
+				<h2><a href="refs/whitepaper.pdf">A Research Whitepaper</a></h2>
+				<h2><a href="refs/sensor_datasheet.pdf">Datasheet for a sensor</a></h2>
+				<h2><a href="refs/appnote.pdf">An Application Note</a></h2>
+				<h2><a href="refs/update_your_website.or_else">And so on...</a></h2>
+				-->
 			</div>
 		</div>
-	
+
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
 		<div id="footer"></div>
     </div>
 </div>
 
 <!--JS-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-migrate-1.1.1.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#header").load("header.html");
-	$("#menu").load("navbar.html");
-	$("#footer").load("footer.html");
+    $("#header").load("../header.html");
+	$("#menu").load("../navbar.html");
+	$("#footer").load("../footer.html");
 });
 </script>
 </body>
