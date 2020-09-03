@@ -15,7 +15,7 @@ This website was based upon a number of source materials, which are elaborated u
 
 <!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
 <!-- Python SimpleHTTPServer Testing -->
-<base href="http://localhost:5500/" />
+<!--<base href="http://localhost:5500/" />-->
 <!-- ECE477 preview URL -->
 <!--<base href="https://engineering.purdue.edu/ece477/preview/" />-->
 <!-- ECE477 final URL -->
@@ -30,10 +30,10 @@ This website was based upon a number of source materials, which are elaborated u
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!--CSS-->
-<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/content.css">
+<link rel="stylesheet" href="../css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/content.css">
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -51,7 +51,7 @@ This website was based upon a number of source materials, which are elaborated u
 	<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
 	    img folder located at this directory level. -->
 	<div id="banner">
-	    <img src="Team/img/team.jpg"></img>
+	    <img src="img/team.jpg"></img>
 	</div>
 
 	<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
@@ -72,18 +72,18 @@ This website was based upon a number of source materials, which are elaborated u
 </div>
 
 <!--JS-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-migrate-1.1.1.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#header").load("header.html");
-    $("#menu").load("navbar.html");
-	$("#member1").load("Team/member1.html");
-    $("#member2").load("Team/member2.html");
-	$("#member3").load("Team/member3.html");
-	$("#member4").load("Team/member4.html");
-	$("#footer").load("footer.html");
+    $("#header").load("../header.html");
+    $("#menu").load("../navbar.html");
+	$("#member1").load("member1.html");
+    $("#member2").load("member2.html");
+	$("#member3").load("member3.html");
+	$("#member4").load("member4.html");
+	$("#footer").load("../footer.html");
 });
 </script>
 </body>
