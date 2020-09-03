@@ -302,6 +302,14 @@ div .img-caption h4 {
     color: #8E8E8E;
 }
 
+#document h3 {
+    color: #3a3a3a;
+	font: bold 25px/25px 'Ubuntu', Arial, Helvetica, sans-serif;
+	margin: 20px 0px 10px -15px;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+}
+
 #policy {
         width: inherit;
 	padding-left: 25px;
