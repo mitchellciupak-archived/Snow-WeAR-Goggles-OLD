@@ -9,8 +9,3 @@ Software Tasks
 
 
 NOTES FOR WEBSITE UPDATES:
-
-Carrie
-  - For the navigation bar, please update href links to use absolute paths instead of relative paths (linking gets messed up when traveling from a page within a directory)
-
-
