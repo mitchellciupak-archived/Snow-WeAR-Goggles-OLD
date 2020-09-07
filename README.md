@@ -6,6 +6,3 @@ Software Tasks
 - Sensor Integration
 - Sensor Data Processing
 - User Interface
-
-
-NOTES FOR WEBSITE UPDATES:
