@@ -30,10 +30,10 @@ This website was based upon a number of source materials, which are elaborated u
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!--CSS-->
-<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/content.css">
+<link rel="stylesheet" href="../css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/content.css">
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -50,7 +50,7 @@ This website was based upon a number of source materials, which are elaborated u
 		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
 			img folder located at this directory level. -->
 		<div id="banner">
-			<img src="./img/BannerImgExample.jpg"></img>
+			<img src="./img/BannerImgExample.jpg">
 		</div>
 	
 		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
@@ -59,11 +59,13 @@ This website was based upon a number of source materials, which are elaborated u
 		<div id="content">
 			<!-- Homework assignments are listed out here -->
 			<h2>Project Videos:</h2>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 			<h2>Project Photos:</h2>
+			<!--
 			<img src="./img/michael-dziedzic-aQYgUYwnCsM-unsplash.jpg" alt="Unsplash1" width="500" height="600">
 			<img src="./img/nenad-grujic--b3wxY6jKEk-unsplash.jpg" alt="Unsplash2" width="500" height="600">
 			<img src="./img/umberto-jXd2FSvcRr8-unsplash.jpg" alt="Unsplash3" width="500" height="600">
+			-->
 		</div>
 	
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
@@ -72,14 +74,14 @@ This website was based upon a number of source materials, which are elaborated u
 </div>
 
 <!--JS-->
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-migrate-1.1.1.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#header").load("header.html");
-	$("#menu").load("navbar.html");
-	$("#footer").load("footer.html");
+    $("#header").load("../header.html");
+	$("#menu").load("../navbar.html");
+	$("#footer").load("../footer.html");
 });
 </script>
 </body>
