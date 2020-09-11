@@ -44,7 +44,7 @@ contact course staff.
 		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
 			img folder located at this directory level. -->
 		<div id="banner">
-			<img src="../../Files/img/BannerImgExample.jpg"></img>
+			<img src="../../Files/img/BannerImgExample.jpg">
 		</div>
 	
 		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
@@ -55,17 +55,69 @@ contact course staff.
             
             <h4>Week 1:</h4>
             <b>Date:</b> 11 September 2020<br>
-            <b>Total hours:</b> 5<br>
+            <b>Total hours:</b> 7<br>
             <b>Description of design efforts:</b><br>
-
+            <table>
+                <tr>
+                    <td style="width: 200px; text-align: center; font-size: 10px; margin-bottom: 0px; padding: 0; line-height: 15px;"><img src="../img/SparkFun_OLED.jpg" style="height: 100px;"><br><b>Figure 1: </b><i>SparkFun TOLED Graphical Breakout Display </i>[1]</td>
+                    <td>My main focus this week was researching different Transparent OLED displays to use in our
+                        project and determining which component specifications were the most important to consider
+                        when choosing our display. After comparing three different displays, I decided on the SparkFun
+                        Transparent Graphical OLED Breakout display. This display supports I2C and SPI interfaces.
+                        I performed preliminary research to review each protocol and determine the pros and cons of
+                        using one or the other.</td>
+                </tr>
+            </table>
+            <br>I2C and SPI are serial communication protocols commonly used to transfer data between a microcontroller
+            and peripheral devices. Both utilize the Master-Slave relationship scheme for their functionality.<br><br>
+            <table>
+                <tr>
+                    <td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;"><img src="../img/SPI_Set_up.png" style="height: 150px;"><br><b>Figure 2: </b><i>SPI Master-Slave Diagram </i>[2]</td>
+                    <td>SPI uses 4 basic signals for communication: SCLK, MOSI, MISO, and SS. SCLK is the Serial Clock
+                        that allows the master and slave to communicate synchronously and is defined by the Master.
+                        MOSI (Master Out Slave In) is the pin through which the Master sends data to the Slave. MISO
+                        (Master In Slave Out) is the pin through which the Slave sends data back to the Master.
+                        Finally, SS (Slave Select) lets the slave know that the Master is trying to communicate with it.
+                        Having multiple Slave Selects allows multiple Slaves to be connected to one Master. The SS
+                        signal attached to the desired slave is pulled low to indicate which slave the Master wishes to
+                        communicate with. Data can be sent serially to and from the slave until the transmission is complete.</td>
+                </tr>
+            </table>
             <br>
+            I2C uses 2 basic signals for communication: SCL and SDA. SCL is the Serial Clock that allows the master and
+            slave to communicate synchronously and is defined by the Master. SDA is the Serial Data signal that can
+            send information to and from the Master and Slave. Unlike SPI which sends data in a continuous stream of
+            bits, I2C sends data bits through packets. The packet includes a Start bit, an Address Frame to indicate
+            which Slave is in use, a Read/Write bit, an ACK/NACK bit, one or more data frames (which include 8 bits of
+            data followed by an ACK/NACK bit), and a Stop bit to signal the end of the packet.<br>
+            <p style="text-align: center; font-size: 10px;"><img src="../img/I2C_Message.png" style="width: 500px;"><br><b>Figure 3: </b><i>I2C Packet Structure </i>[3]</b></p>
+            <br>
+            Between the two protocols, SPI is preferred because it is able to transfer data faster than I2C so that
+            the display can more quickly relay user metric information and toggle between screens as needed. The
+            microcontrollers we are currently considering have 3 SPI peripherals which accommodates the OLED Display,
+            LoRa Radio Transceiver, and IMU Receiver - the three components that require SPI in our design. In the event
+            that a different component requires the use of SPI, the OLED can be converted to using I2C in exchange for
+            increased display update time.
+            <br><br>
+            <b>Sources Cited:</b><br>
+            <p style="line-height: 20px;">[1] SparkFun.com. 2020. <i>SparkFun Electronics.</i> [online] Available at: &lthttps://www.sparkfun.com/products/15173> [Accessed 8 September 2020].<br>
+                [2] SparkFun.com. 2020. <i>SparkFun Electronics.</i> [online] Available at: &lthttps://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi/all> [Accessed 10 September 2020].<br>
+                [3] CircuitBasics.com. 2020. <i>Circuit Basics.</i> [online] Available at: &lthttps://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/#:~:text=I2C%20is%20a%20serial%20communication,the%20master%20and%20the%20slave.> [Accessed 10 September 2020].</p>
 
+            <br><b>References:</b><br>
+            <p style="line-height: 20px;">CircuitBasics.com. 2020. <i>Circuit Basics.</i> [online] Available at: &lthttps://www.circuitbasics.com/basics-of-the-spi-communication-protocol> [Accessed 10 September 2020].<br>
+                CircuitBasics.com. 2020. <i>Circuit Basics.</i> [online] Available at: &lthttps://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/> [Accessed 10 September 2020].<br>
+                Articles.Saleae.com. 2020. <i>Saleae Articles.</i> [online] Available at: &lthttps://articles.saleae.com/logic-analyzers/spi-vs-i2c-protocol-differences-and-things-to-consider> [Accessed 10 September 2020].
+            </p>
+            <hr style="width: 70%; color: black; text-align: center; display: block; height: 1px; background-color: black; border: 0; margin-top: 40px; margin-bottom: 40px;">
+
+            <!--
             <h4>Week 2:</h4>
             <b>Date:</b> -Enter today's date here-<br>
             <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
             <b>Description of design efforts:</b><br>
             -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
-                      
+                      -->
         </div>
 	
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
