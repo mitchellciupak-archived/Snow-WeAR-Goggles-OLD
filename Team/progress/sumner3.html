@@ -54,18 +54,32 @@ contact course staff.
             <h2>Progress Report for Peter Sumner</h2>
 
             <h4>Week 1:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
+            <b>Date:</b> 9 September 2020<br>
+            <b>Total hours:</b> 6<br>
             <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
-            <br>
-
-            <h4>Week 2:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
-            <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
-
+			<td>Throughout the project I will be working on implementing the GPS module. The focus of this week was to research GPS operation and possible 
+				GPS modules to use. GPS receivers use a satellite constellation of at least 24 satellites to calculate potision at a given time. To do this calculation 
+				accurately the receiver must be able to lock onto 4 satellites and the satellite configuration ensures that this is always possible [1]. 
+				<br>
+			</td>
+			<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;">
+				<a href = "https://cdn.sparkfun.com/r/700-700/assets/0/3/9/5/8/50db5859ce395f0c2a000002.gif">
+				<img src="../img/sumner3_progress/GPS_Sat.gif" style="height: 200px;"><br><b>Figure 1: Constellation of Orbiting Satellites [1]</b>
+				<br>
+			</a>
+			</td>
+			<td>Only basic functionality of a GPS is needed to receive coordinate and alititude data as required for the project. Since the GPS 
+				requirements are minimal, the feature I determined to be most important was power consumption. The goggles will be battery operated for hours at 
+				a time and selecting low power components is key. Some modules, like the MTK3339 by Adafruit, have a sleep mode that can be activated to lower
+				consumption further [2]. The GPS will only be actively receiving when requested by the user so this could be a useful fucntion.<br>
+				<br>
+				The next step is to aqcuire the physical GPS module and begin experimenting with its functionality.
+			</td>
+			<br><br>
+			<b>Sources Cited:</b><br>
+			<p style="line-height: 20px;">[1] Learn.SparkFun.com. 2020. sparkfun. [online] Available at: &lthttps://learn.sparkfun.com/tutorials/gps-basics/all> [Accessed 9 September 2020].<br>
+				[2] Adafruit.com. 2020. Adafruit Industries. [online] Available at: &lthttps://www.adafruit.com/product/790> [Accessed 8 September 2020].
+			</p>
         </div>
 
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
