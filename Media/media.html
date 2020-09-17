@@ -34,6 +34,8 @@ This website was based upon a number of source materials, which are elaborated u
 <link rel="stylesheet" href="../css/responsive.css">
 <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="../css/content.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="media.css">
 <!--[if IE 6]>
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -59,8 +61,42 @@ This website was based upon a number of source materials, which are elaborated u
 		<div id="content">
 			<!-- Homework assignments are listed out here -->
 			<h2>Project Videos:</h2>
+			<video id="video" width="auto" height="640" style="padding-left: 390px; padding-top: 150px; padding-bottom: 0px;">
+				<source src="video/BlinkingLED.mp4" type="video/mp4">
+				<p>
+				Your browser doesn't support HTML5 video.
+				</p>
+			</video>
+			<div id="video-container">
+				<div id="video-controls">
+					<button type="button" id="play-pause" class="play" style="width: 50px;">Play</button>
+					<input type="range" id="seek-bar" value="0">
+					<button type="button" id="mute" style="width: 60px;">Mute</button>
+					<input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+					<button type="button" id="full-screen" style="float: right; padding-top: 4px; padding-right: 10px;"><i class="fa fa-expand"></i></button>
+				</div>
+			</div>
+			<p style="text-align: center;"><i>Show Me A Thing I</i></p>
+
+			<script src="script.js"></script>
+
+			<!--
+			<div style="display: block; margin-left: auto; margin-right: auto; text-align: center;">
+                <video width="auto" height="600" controls>
+					<source src="video/BlinkingLED.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+            </div> -->
 			<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+			<br><br><br>
 			<h2>Project Photos:</h2>
+			<table>
+				<tr>
+					<td style="width: 600px;"><img src="img/SystemWorkbenchEnvironment.PNG" style="width: 600px;"></td>
+					<td style="padding-left: 20px;"><b>Figure 1: </b>System Workbench IDE used for <i>Show Me A Thing I</i></td>
+				</tr>
+			</table>
+
 			<!--
 			<img src="./img/michael-dziedzic-aQYgUYwnCsM-unsplash.jpg" alt="Unsplash1" width="500" height="600">
 			<img src="./img/nenad-grujic--b3wxY6jKEk-unsplash.jpg" alt="Unsplash2" width="500" height="600">
