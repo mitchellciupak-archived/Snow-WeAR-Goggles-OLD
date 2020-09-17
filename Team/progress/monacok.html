@@ -59,7 +59,7 @@ contact course staff.
             <b>Description of design efforts:</b><br>
             <table>
                 <tr>
-                    <td style="width: 200px; text-align: center; font-size: 10px; margin-bottom: 0px; padding: 0; line-height: 15px;"><img src="../img/SparkFun_OLED.jpg" style="height: 100px;"><br><b>Figure 1: </b><i>SparkFun TOLED Graphical Breakout Display </i>[1]</td>
+                    <td style="width: 200px; text-align: center; font-size: 10px; margin-bottom: 0px; padding: 0; line-height: 15px;"><img src="../img/monacok_progress/SparkFun_OLED.jpg" style="height: 100px;"><br><b>Figure 1: </b><i>SparkFun TOLED Graphical Breakout Display </i>[1]</td>
                     <td>My main focus this week was researching different Transparent OLED displays to use in our
                         project and determining which component specifications were the most important to consider
                         when choosing our display. After comparing three different displays, I decided on the SparkFun
@@ -72,7 +72,7 @@ contact course staff.
             and peripheral devices. Both utilize the Master-Slave relationship scheme for their functionality.<br><br>
             <table>
                 <tr>
-                    <td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;"><img src="../img/SPI_Set_up.png" style="height: 150px;"><br><b>Figure 2: </b><i>SPI Master-Slave Diagram </i>[2]</td>
+                    <td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;"><img src="../img/monacok_progress/SPI_Set_up.png" style="height: 150px;"><br><b>Figure 2: </b><i>SPI Master-Slave Diagram </i>[2]</td>
                     <td>SPI uses 4 basic signals for communication: SCLK, MOSI, MISO, and SS. SCLK is the Serial Clock
                         that allows the master and slave to communicate synchronously and is defined by the Master.
                         MOSI (Master Out Slave In) is the pin through which the Master sends data to the Slave. MISO
@@ -90,7 +90,7 @@ contact course staff.
             bits, I2C sends data bits through packets. The packet includes a Start bit, an Address Frame to indicate
             which Slave is in use, a Read/Write bit, an ACK/NACK bit, one or more data frames (which include 8 bits of
             data followed by an ACK/NACK bit), and a Stop bit to signal the end of the packet.<br>
-            <p style="text-align: center; font-size: 10px;"><img src="../img/I2C_Message.png" style="width: 500px;"><br><b>Figure 3: </b><i>I2C Packet Structure </i>[3]</b></p>
+            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/I2C_Message.png" style="width: 500px;"><br><b>Figure 3: </b><i>I2C Packet Structure </i>[3]</b></p>
             <br>
             Between the two protocols, SPI is preferred because it is able to transfer data faster than I2C so that
             the display can more quickly relay user metric information and toggle between screens as needed. The
@@ -111,13 +111,31 @@ contact course staff.
             </p>
             <hr style="width: 70%; color: black; text-align: center; display: block; height: 1px; background-color: black; border: 0; margin-top: 40px; margin-bottom: 40px;">
 
-            <!--
-            <h4>Week 2:</h4>
-            <b>Date:</b> -Enter today's date here-<br>
-            <b>Total hours:</b> -Enter the number of hours you worked this week here-<br>
-            <b>Description of design efforts:</b><br>
-            -Discuss your design efforts here. Remember to follow the guidelines presented in the Progress Report Policy, available <a href="https://engineering.purdue.edu/ece477/Course/Policies/">here</a>. This is a template entry; simply copy/paste this entry when doing progress reports each week.</br>
-                      -->
+            <h4>Week 4:</h4>
+            <b>Date:</b> 18 September 2020<br>
+            <b>Total hours:</b> 8<br>
+            <b>Description of design efforts:</b><br><br>
+            <table>
+                <tr>
+                    <td style="width: 50%;"><img src="../img/monacok_progress/CostAnalysis1.PNG" style="width: 100%;"><br>
+                        <img src="../img/monacok_progress/CostAnalysis2.PNG" style="width: 100%;"><br>
+                        <img src="../img/monacok_progress/CostAnalysis3.PNG" style="width: 100%;"></td>
+                    <td style="vertical-align: top; padding-top: 20px;">Once our team selected our primary components, I began a Cost-Analysis report to minimize cost
+                        when selecting component suppliers. For each component, I created a table listing reliable
+                        vendors with their respective cost multiplied by desired quantity of the in-stock component and
+                        their shipping cost to Purdue University. Each table includes a quantity cell which, when
+                        changed, will alter cost values automatically.<br><br>Finally, I calculated two totals: Cheapest
+                        Individual Options and Mouser-Digikey Priority. As the name suggests, the Cheapest Individual
+                        Options total was found by summing the least expensive supplier option from each component
+                        table. If a supplier happened to supply the cheapest option for multiple components, the
+                        shipping cost was only included once. The Mouser-Digikey Priority total uses Mouser and Digikey
+                        suppliers when possible to reduce shipping cost. These two suppliers had multiple of the
+                        desired components available and were the only reliable suppliers for certain components.<br><br>
+                        The Mouser-Digikey Priority total
+                    </td>
+                </tr>
+            </table>
+
         </div>
 	
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
