@@ -113,13 +113,13 @@ contact course staff.
 
             <h4>Week 4:</h4>
             <b>Date:</b> 18 September 2020<br>
-            <b>Total hours:</b> 8<br>
+            <b>Total hours:</b> 12<br>
             <b>Description of design efforts:</b><br><br>
             <table>
                 <tr>
-                    <td style="width: 50%;"><img src="../img/monacok_progress/CostAnalysis1.PNG" style="width: 100%;"><br>
-                        <img src="../img/monacok_progress/CostAnalysis2.PNG" style="width: 100%;"><br>
-                        <img src="../img/monacok_progress/CostAnalysis3.PNG" style="width: 100%;"></td>
+                    <td style="width: 50%; text-align: center;"><img src="../img/monacok_progress/CostAnalysis1.PNG" style="width: 90%;"><br>
+                        <img src="../img/monacok_progress/CostAnalysis2.PNG" style="width: 90%;"><br><p style="font-size: 10px;"><b>Figure 4: </b><i>Cost-Analysis Component Tables</i></p>
+                        <!--<img src="../img/monacok_progress/CostAnalysis3.PNG" style="width: 80%;"></td> -->
                     <td style="vertical-align: top; padding-top: 20px;">Once our team selected our primary components, I began a Cost-Analysis report to minimize cost
                         when selecting component suppliers. For each component, I created a table listing reliable
                         vendors with their respective cost multiplied by desired quantity of the in-stock component and
@@ -131,10 +131,50 @@ contact course staff.
                         shipping cost was only included once. The Mouser-Digikey Priority total uses Mouser and Digikey
                         suppliers when possible to reduce shipping cost. These two suppliers had multiple of the
                         desired components available and were the only reliable suppliers for certain components.<br><br>
-                        The Mouser-Digikey Priority total
+                    <img src="../img/monacok_progress/CostAnalysis4.PNG" style="width: 100%;"><br><p style="text-align: center; font-size: 10px;"><b>Figure 5: </b><i>Cost-Analysis Totals</i></b></p><br>
+                        The Mouser-Digikey Priority total was less expensive due to the savings earned from reduced
+                        shipping costs. The images displayed show portions of the cost analysis document; however, as this is a
+                        living document these numbers may not be up-to-date. The most recent version of this document
+                        can be found on our <a href="https://engineering.purdue.edu/477grp6/Files/references.html">Reference Page</a>.
                     </td>
                 </tr>
+            </table><br>
+            <table>
+                <tr>
+                    <td style="width: 70%;">Additionally, I reviewed various functionalities of the STM32 Microcontroller by practicing
+                        blinking an on-board LED using timers and the on-board user pushbutton. I consulted the STM32F0xx
+                        Reference Manual [1] to determine which timer could be linked to the on-board LED and to reference
+                        multiple STM32F0 register structures such as GPIOx_MODER, RCC_AHBENR, and TIMx_CR1. Since it has
+                        been a couple of years since I have programmed a microcontroller, I also referenced an Embedded
+                        Systems textbook which includes programming syntax examples and concept theory for ARM Cortex-M
+                        Microcontrollers [2]. The final result can be found on our <a href="https://engineering.purdue.edu/477grp6/Media/media.html">Media Page</a>.</td>
+                    <td><p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32F0.jpg" style="width: 150px;"><br><b>Figure 6: </b><i>STM32F0 Microcontroller Practice Set-up</i></b></p>
+</td>
+                </tr>
             </table>
+
+            Our team is strongly considering using the STM System Workbench IDE for our
+            project, so I used this IDE when programming the board. System Workbench can also interface with
+            STMicroelectronics' relatively newer software STM32CubeMX which can generate initialization code for
+            STM32 Microcontrollers via GUI. I installed STM32CubeMX to introduce myself to the application in
+            case it proves useful. I intend to delve more into STM32CubeMX as well as other resources for STM32
+            programming such as HAL Libraries, which seem to be increasingly popular for programming STM32
+            controllers.<br><br>
+            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/SystemWorkbench.PNG" style="width: 100%;" border="2px"><br><b>Figure 7: </b><i>STMicroelectronics System Workbench IDE</i></b></p>
+            <br>
+            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32CubeMX.PNG" style="width: 100%;" border="2px"><br><b>Figure 8: </b><i>STMicroelectronics STM32CubeMX IDE</i></b></p>
+            <br>
+            <b>Next Week Plan:</b><br>
+            <ul>
+                <li>Ensure Order of Primary Components</li>
+                <li>Practice Programming STM32L4 Microcontroller</li>
+            </ul>
+            <br>
+            <b>Sources Cited:</b><br>
+            <p style="line-height: 20px;">[1] ST.com. 2020. <i>STMicroelectronics.</i> [online] Available at: &lthttps://www.st.com/resource/en/reference_manual/dm00031936-stm32f0x1stm32f0x2stm32f0x8-advanced-armbased-32bit-mcus-stmicroelectronics.pdf> [Accessed 16 September 2020].<br>
+                [2] Y. Zhu, <i>Embedded systems with ARM Cortex-M microcontrollers in assembly language and C Third Edition.</i> E-Man Press LLC, 2018.</p>
+
+            <hr style="width: 70%; color: black; text-align: center; display: block; height: 1px; background-color: black; border: 0; margin-top: 40px; margin-bottom: 40px;">
 
         </div>
 	
