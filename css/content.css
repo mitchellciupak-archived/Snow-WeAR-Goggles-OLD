@@ -658,7 +658,7 @@ div .img-caption h4 {
     margin-right: 10px;
 }
 
-video {
+#video {
     -webkit-transform: rotate(-90deg); /* Safari and Chrome */
     -moz-transform: rotate(-90deg);   /* Firefox */
     -ms-transform: rotate(-90deg);   /* IE 9 */

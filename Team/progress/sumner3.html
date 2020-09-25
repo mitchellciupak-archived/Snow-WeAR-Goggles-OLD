@@ -54,7 +54,7 @@ contact course staff.
             <h2>Progress Report for Peter Sumner</h2>
 
             <h4>Week 1:</h4>
-            <b>Date:</b> 9 September 2020<br>
+            <b>Date:</b> 9-9-2020<br>
             <b>Total hours:</b> 6<br>
             <b>Description of design efforts:</b><br>
 			<td>Throughout the project I will be working on implementing the GPS module. The focus of this week was to research GPS operation and possible 
@@ -62,23 +62,105 @@ contact course staff.
 				accurately the receiver must be able to lock onto 4 satellites and the satellite configuration ensures that this is always possible [1]. 
 				<br>
 			</td>
-			<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;">
-				<a href = "https://cdn.sparkfun.com/r/700-700/assets/0/3/9/5/8/50db5859ce395f0c2a000002.gif">
-				<img src="../img/sumner3_progress/GPS_Sat.gif" style="height: 200px;"><br><b>Figure 1: Constellation of Orbiting Satellites [1]</b>
-				<br>
-			</a>
-			</td>
-			<td>Only basic functionality of a GPS is needed to receive coordinate and alititude data as required for the project. Since the GPS 
-				requirements are minimal, the feature I determined to be most important was power consumption. The goggles will be battery operated for hours at 
-				a time and selecting low power components is key. Some modules, like the MTK3339 by Adafruit, have a sleep mode that can be activated to lower
-				consumption further [2]. The GPS will only be actively receiving when requested by the user so this could be a useful fucntion.<br>
-				<br>
+			<table>
+				<tr>
+					<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;">
+						<a href = "https://cdn.sparkfun.com/r/700-700/assets/0/3/9/5/8/50db5859ce395f0c2a000002.gif">
+						<img src="../img/sumner3_progress/GPS_Sat.gif" style="height: 200px;"><br><b>Figure 1: Constellation of Orbiting Satellites [1]</i></td>
+					</a>
+					<td>Only basic functionality of a GPS is needed to receive coordinate and alititude data as required for the project. Since the GPS 
+						requirements are minimal, the feature I determined to be most important was power consumption. The goggles will be battery operated for hours at 
+						a time and selecting low power components is key. Some modules, like the MTK3339 by Adafruit, have a sleep mode that can be activated to lower
+						consumption further [2]. The GPS will only be actively receiving when requested by the user so this could be a useful fucntion.<br>
+					</td>
+				</tr>
+			</table>
+			
+			<td><br>
 				The next step is to aqcuire the physical GPS module and begin experimenting with its functionality.
+			</td>
+			<br>
+			<h4>Week 2:</h4> 
+			<b>Date:</b> 9-18-2020<br>
+			<b>Total hours:</b> 6<br>
+			<b>Description of design efforts:</b><br>
+			<table>
+				<td>This week I ordered a GPS breakout, specifically the Ultimate GPS Breakout from Adafruit [3]. Unfortunately, the parts did not arrive in time 
+					to begin working with the module this week. Nevertheless, I did some digging to determine how to properly program the GPS and set up a testing 
+					environment with Arduino. Adafruit has published a GPS library compatible with the module that is open-source and can be found on GitHub [4].
+					The relevant functions and variables to this project are found in the header file. The GPS module can be connected via either SPI or I2C and in 
+					addition to housing functions, the library also contains basic examples for how each could be structured. 
+					<br>
+				
+				</td>
+				<td style="text-align: center; vertical-align: top; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;">
+					<a href = "https://cdn-shop.adafruit.com/970x728/746-11.jpg">
+					<img src="../img/sumner3_progress/GPS_Breakout.png" style="height: 200px;"><br><b>Figure 1: Ultimate GPS Breakout [3]</b>
+					<br>
+				</a>
+				</td>
+			</table>
+			<br>
+			<table>
+				<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;">
+					<img src="../img/sumner3_progress/Arduino_GPS_Test.jpg" style="width: 600px;"><br><b><u>Figure 2: Experimental Setup With Arduino</u></b>
+				<td>A portion of an Arduino script is shown on the left that establishes working communication with the GPS module. The setup section
+					sets the baud rate and configures the GPS output. It then enters a loop as the GPS receives and digests data. GPS data is packaged in the form of National Marine 
+					Electronics Association (NMEA) sentences [5]. Each sentence contains all of the data collected for a specific point in time. When the GPS receives an NMEA sentence 
+					each variable must be extracted individually. <br>
+				<br>As data for each of the individual variables is collected it is printed to the console output. Once the hardware portion is implemented, this will enable 
+					me to assess the accuracy of data received as well as mirror the display a goggle wearer will have in the final implementation of the project.
+				</td>
+			</table>
+			<br>
+			<h4>Week 3:</h4>
+			<b>Date:</b> 9-25-2020<br>
+			<b>Total hours: </b>16<br>
+			<b>Description of design efforts:</b><br>
+	 		<td>This week I began working with the GPS module using an Arduino Uno. The wiring of the module is shown in Figure 1. On the right side of the 
+				photo is a wire that extends from the GPS breakout board. This connects to the GPS antenna (Figure 2) that must be placed outside or it 
+				will struggle to properly get a location fix on any satellites. 
+			</td>
+			<br><br>
+			<table>
+				<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;"> 
+					<img src="../img/sumner3_progress/Arduino_GPS_Setup.jpg" style="width: 550px;"><br><b><u>Figure 1: Arduino GPS Module Wiring</u></b>
+					<br>
+				</td>
+				<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;"> 
+					<img src="../img/sumner3_progress/GPS_Outside.jpg" style="width: 300px;"><br><b><u>Figure 2: GPS Antenna Setup</u></b>
+					<br>
+				</td>
+			</table>
+			<br>
+			<td>When I first attempted to connect to the GPS and request data, I was couldn't get the GPS antenna to get a fix. I was able to receive empty sets of
+				data through the Arduino, so even though everything was connected properly on my end the antenna was not acquiring satellite signals. The 
+				solution to this ended up being to wait for about 30 minutes and then data finally started to come in. The raw GPS data is received in the format of NMEA
+				sentences which are somewhat readable to the eye but not very useful until they are parsed. I utilized the Adafruit GPS library [4] to successfully parse 
+				the data and output in a useful format to the Arduino serial monitor. I included a screen capture of my serial output below in Figure 3. There 
+				are two sets of data from two timestamps and for each set I printed the time, date, fix status, location, speed, angle, altitude, and number of 
+				satellites. The last four lines that begin with "$GPXXX" show the NMEA sentence data format that I echoed to the output for debugging purposes.
+			</td>
+			<br><br>
+			<table>
+				<td style="text-align: center; font-size: 10px; margin-bottom: 0px; padding-right: 10px; line-height: 15px;">
+					<img src="../img/sumner3_progress/Arduino_GPS_Output.jpg" style="width: 950px;"><br><b><u>Figure 3: GPS Data Captured From Arduino Serial Monitor</u></b>
+					<br>
+				</td>
+			</table>
+			<br>
+			<td>Acquiring data from the GPS is an exciting milestone for this portion of the project. While stationed in my room, the GPS gives accurate data 
+				and now the next steps will be to test the accuracy as location and speed change and then to implement the functionality using the chosen STM32
+				microcontroller. Another factor I will need to keep in mind is the time taken to acquire a location fix and I will be looking into ways to 
+				minimize this as much as possible.
 			</td>
 			<br><br>
 			<b>Sources Cited:</b><br>
 			<p style="line-height: 20px;">[1] Learn.SparkFun.com. 2020. sparkfun. [online] Available at: &lthttps://learn.sparkfun.com/tutorials/gps-basics/all> [Accessed 9 September 2020].<br>
-				[2] Adafruit.com. 2020. Adafruit Industries. [online] Available at: &lthttps://www.adafruit.com/product/790> [Accessed 8 September 2020].
+				[2] Adafruit.com. 2020. Adafruit Industries. [online] Available at: &lthttps://www.adafruit.com/product/790> [Accessed 8 September 2020].<br>
+				[3] Adafruit.com. 2020. Adafruit Industries. [online] Available at: &lthttps://www.adafruit.com/product/746> [Accessed 15 September 2020].<br>
+				[4] GitHub.com. 2020. GitHub, inc. [online] Available at: &lthttps://github.com/adafruit/Adafruit_GPS> [Accessed 16 September 2020]. <br>
+				[5] GPSInformation.org. 2020. GPS Information. [online] Available at: &lthttps://www.gpsinformation.org/dale/nmea.htm#intro> [Accessed 16 September 2020]. <br>
 			</p>
         </div>
 
