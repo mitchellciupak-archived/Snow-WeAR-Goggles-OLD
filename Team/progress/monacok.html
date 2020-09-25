@@ -148,7 +148,7 @@ contact course staff.
                         been a couple of years since I have programmed a microcontroller, I also referenced an Embedded
                         Systems textbook which includes programming syntax examples and concept theory for ARM Cortex-M
                         Microcontrollers [2]. The final result can be found on our <a href="https://engineering.purdue.edu/477grp6/Media/media.html">Media Page</a>.</td>
-                    <td><p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32F0.jpg" style="width: 150px;"><br><b>Figure 6: </b><i>STM32F0 Microcontroller Practice Set-up</i></b></p>
+                    <td><p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32F0.jpg" style="width: 150px;"><br><b>Figure 6: </b><i>STM32F0 Microcontroller Practice Set-up</i></p>
 </td>
                 </tr>
             </table>
@@ -160,9 +160,9 @@ contact course staff.
             case it proves useful. I intend to delve more into STM32CubeMX as well as other resources for STM32
             programming such as HAL Libraries, which seem to be increasingly popular for programming STM32
             controllers.<br><br>
-            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/SystemWorkbench.PNG" style="width: 100%;" border="2px"><br><b>Figure 7: </b><i>STMicroelectronics System Workbench IDE</i></b></p>
+            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/SystemWorkbench.PNG" style="width: 100%;" border="2px"><br><b>Figure 7: </b><i>STMicroelectronics System Workbench IDE</i></p>
             <br>
-            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32CubeMX.PNG" style="width: 100%;" border="2px"><br><b>Figure 8: </b><i>STMicroelectronics STM32CubeMX IDE</i></b></p>
+            <p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32CubeMX.PNG" style="width: 100%;" border="2px"><br><b>Figure 8: </b><i>STMicroelectronics STM32CubeMX IDE</i></p>
             <br>
             <b>Next Week Plan:</b><br>
             <ul>
@@ -176,6 +176,69 @@ contact course staff.
 
             <hr style="width: 70%; color: black; text-align: center; display: block; height: 1px; background-color: black; border: 0; margin-top: 40px; margin-bottom: 40px;">
 
+            <h4>Week 5:</h4>
+            <b>Date:</b> 24 September 2020<br>
+            <b>Total hours:</b> 10<br>
+            <b>Description of design efforts:</b><br><br>
+            <table>
+                <tr>
+                    <td style="width: 30%;"><p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32L476G-DISCO.jpg" style="height: 150px;"><br><b>Figure 9: </b><i>STM32L476G-DISCOVERY board</i></p></td>
+                    <td>First, I created a list of components from our Bill of Materials to be ordered immediately. These are
+            components our team is certain will be required for initial development, namely: LoRa Transceivers, GPS
+            Receiver Development Boards, TOLED Displays, and IMU Development Boards. The microcontrollers will be
+            ordered soon as well; however, each team member has their own chosen method for initial development. I will
+            be continuing my development using the STM32L476G-DISCOVERY board.</td>
+                </tr>
+            </table>
+            <br>
+            I spent the majority of this week working with the STM32L4 to display information on the on-chip LCD screen
+            and interface with an Adafruit MPU-6050 6-DoF IMU. My goal was to request and receive acceleration and gyro
+            information from the MPU-6050 and display a portion of this data on the LCD display. During this process, I
+            became more familiar with the STM32CubeMX IDE mentioned in last week's progress report. I used this
+            application to create the initialization functions necessary for the System Clock, GPIO, and I2C
+            functionality. <br><br>
+            <table style="margin-left: auto; margin-right: auto; width: 80%;">
+                <tr>
+                    <td style="width: 40%"><p style="text-align: center; font-size: 10px; line-height: 15px;"><img src="../img/monacok_progress/STM32CubePinOutView.PNG" style="width: 250px;"><br><b>Figure 10: </b><i>STM32CubeMX Pin Out View of STM32L4 with Pin Initialization</i></p><br></td>
+                    <td style="width: 60%;"><p style="text-align: center; font-size: 10px;"><img src="../img/monacok_progress/STM32CubeSystemView.PNG" style="width: 400px; margin-left: auto; margin-right: auto;"><br><b>Figure 11: </b><i>STM32CubeMX System View of Initialized Components</i></p><br></td>
+                </tr>
+            </table>
+            The STM32CubeMX generated code also comes with all of the necessary Hardware Abstraction
+            Layer (HAL) library files which can be used to code most any STM32 microcontroller at a higher level.
+            Although the HAL Library was very useful for testing, my one concern is the memory size of the library and
+            if the memory requirement can be satisfied in addition to the memory requirement of the graphic's libraries
+            required for the Transparent OLED Display. There are many files included in the HAL library, a good number
+            of which will be irrelevant to our project. While the net of dependancies seems complex, it may be possible
+            to pick and choose the files we want to include from the HAL library, or we could use the HAL library as a
+            reference for creating our own form of abstraction.<br><br>
+
+            <table>
+                <tr>
+                    <td>The majority of the example code supplied for the MPU-6050 was Arduino based and used very high-level
+            functions which did not give a good sense as to how the application was actually interfacing with the
+            sensor. In order to work with the IMU, I referenced an online tutorial as well as the Embedded Systems
+            textbook cited in last week's progress report [1] [2]. The code for interfacing with the LCD screen was
+            created by referencing an example using the HAL library from the STM32CubeL4 expansion software. The end
+            result is documented on our <a href="https://engineering.purdue.edu/477grp6/Media/media.html">Media Page</a>.<br><br>
+                    <p style="text-align: center; font-size: 10px; line-height: 15px;"><img src="../img/monacok_progress/MPU6050.jpg" style="width: 250px;"><br><b>Figure 13: </b><i>Adafruit MPU-6050 6DoF IMU Sensor</i></p>
+                    </td>
+                    <td style="width: 40%"><p style="text-align: center; font-size: 10px; line-height: 15px;"><img src="../img/monacok_progress/STM32L4_SetUp.jpg" style="height: 350px;"><br><b>Figure 12: </b><i>STM32L4 LCD and IMU Practice Set-up</i></p></td>
+                </tr>
+            </table>
+
+            <br><br>
+            <b>Next Week Plan:</b><br>
+            <ul>
+                <li>Interface with Transparent OLED Display using the STM32L4 Microcontroller</li>
+                <li>Complete the Software Formalization Assignment</li>
+            </ul>
+            <br>
+
+            <b>Sources Cited:</b><br>
+            <p style="line-height: 20px;">[1] ControllersTech.com. 2020. <i>ControllersTech.</i> [online] Available at: &lthttps://controllerstech.com/how-to-interface-mpu6050-gy-521-with-stm32/> [Accessed 22 September 2020].<br>
+                [2] Y. Zhu, <i>Embedded systems with ARM Cortex-M microcontrollers in assembly language and C Third Edition.</i> E-Man Press LLC, 2018.</p>
+
+            <hr style="width: 70%; color: black; text-align: center; display: block; height: 1px; background-color: black; border: 0; margin-top: 40px; margin-bottom: 40px;">
         </div>
 	
 		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
