@@ -1,8 +1,6 @@
 # ECE477
-Senior Design Project: AR Ski Googles
-[Wiki](https://github.com/mitchellciupak/ECE477/wiki)
+Senior Design Project: AR Ski Googles OLD 
 
-Software Tasks
-- Sensor Integration
-- Sensor Data Processing
-- User Interface
+PLEASE VISIT [ECE 477 - Team 6](https://github.com/ECE477) Org for live repos
+
+[Wiki](https://github.com/mitchellciupak/ECE477/wiki)
