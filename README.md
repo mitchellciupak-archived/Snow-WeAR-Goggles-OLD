@@ -1,5 +1,5 @@
 # ECE477
-Senior Design Project: AR Ski Googles OLD 
+Senior Design Project: AR Ski Goggles OLD 
 
 PLEASE VISIT [ECE 477 - Team 6](https://github.com/ECE477) Org for live repos
 
